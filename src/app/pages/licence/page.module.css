@@ -1,0 +1,211 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: min(900px, 100%);
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  box-shadow: var(--shadow-card);
+}
+
+.mainContainer h1 {
+  margin: 0;
+
+  color: rgb(15, 23, 42);
+
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.licenceList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  width: 100%;
+  padding: 20px 22px;
+
+  color: rgb(15, 23, 42);
+  background: #f8fafc;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+
+  list-style: none;
+}
+
+.licenceList > li {
+  line-height: 1.5;
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-top: 7px;
+  margin-left: 28px;
+
+  color: #475569;
+
+  list-style: square;
+}
+
+.licenceForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+
+  width: 100%;
+  padding: 20px 22px;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.licenceForm fieldset {
+  width: 100%;
+
+  border: none;
+}
+
+.licenceForm label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: 100%;
+
+  color: rgb(15, 23, 42);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.licenceForm input {
+  width: 100%;
+  height: 38px;
+  padding: 0 11px;
+
+  color: rgb(15, 23, 42);
+  background: #ffffff;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+
+  font-size: 0.85rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.licenceForm input:hover {
+  border-color: #94a3b8;
+}
+
+.licenceForm input:focus {
+  border-color: rgb(147, 197, 253);
+  box-shadow: 0 0 0 3px rgba(147, 197, 253, 0.3);
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+}
+
+.configButtonBack,
+.configButtonSave {
+  min-width: 130px;
+  min-height: 38px;
+  padding: 9px 18px;
+
+  color: #ffffff;
+  background: rgb(15, 23, 42);
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.configButtonBack:hover,
+.configButtonSave:hover {
+  background: rgb(30, 41, 59);
+
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.25);
+}
+
+.configButtonBack:active,
+.configButtonSave:active {
+  transform: translateY(1px);
+}
+
+.errorMsg {
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+
+  color: var(--danger);
+  background: var(--danger-bg);
+
+  border: 1px solid #f5c2c2;
+  border-radius: 6px;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  .mainContainer {
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+  .licenceList,
+  .licenceForm {
+    padding: 18px;
+  }
+
+  .buttonsContainer {
+    flex-direction: column;
+  }
+
+  .configButtonBack,
+  .configButtonSave {
+    width: 100%;
+  }
+}

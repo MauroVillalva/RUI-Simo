@@ -1,0 +1,16 @@
+.input, .error, .good {
+  padding-left: 2%;
+  border: 1px solid #cccccc;
+}
+
+.input {
+  border-bottom: 2px solid #cccccc;
+}
+
+.error {
+  border-bottom: 2px solid red;
+}
+
+.good {
+  border-bottom: 2px solid green;
+}

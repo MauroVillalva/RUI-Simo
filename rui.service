@@ -1,0 +1,14 @@
+[Unit]
+Description=Rui System Service
+After=network.target
+
+[Service]
+Environment="NEXT_API_SECRET_KEY=Tarmo.Goyf" "NEXT_SECRET_KEY=Tarmo.Goyf"
+WorkingDirectory=/home/Argos/rui
+ExecStart=/usr/bin/npm start
+ExecStop=/usr/bin/npm stop
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

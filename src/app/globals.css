@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "Orbitron";
+  src: url("/assets/fonts/orbitron/orbitron-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Exo2";
+  src: url("/assets/fonts/Exo_2/static/Exo2-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --background: #f4f6f8;
+  --surface: #ffffff;
+
+  --foreground: #1f2937;
+  --muted: #6b7280;
+
+  --primary: #1976d2;
+  --primary-dark: #1565c0;
+  --primary-light: #eaf3fc;
+
+  --success: #2e7d32;
+  --success-bg: #edf7ed;
+
+  --warning: #ed6c02;
+  --warning-bg: #fff4e5;
+
+  --danger: #d32f2f;
+  --danger-bg: #fdeded;
+
+  --border: #e0e4e8;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+
+  color: var(--foreground);
+  background: var(--background);
+
+  font-family: "Exo2", system-ui, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+button,
+input,
+select,
+textarea {
+  font-family: "Exo2", system-ui, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
