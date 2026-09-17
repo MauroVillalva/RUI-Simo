@@ -59,8 +59,7 @@ export const readWeight = (port) => {
         };
       });
 
-      const leanZRem = numSelected.replace(/([1-9]\d*|0)/, "");
-      const dataToNum = Number(leanZRem);
+      const dataToNum = Number(numSelected.trim());
       const statusChar = charSelected;
 
       return {
