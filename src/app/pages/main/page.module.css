@@ -297,3 +297,28 @@ select.input {
 
   width: 100%;
 }
+
+.licenceStatus {
+  padding: 9px 18px;
+
+  border-radius: 6px;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.licenceActive {
+  color: var(--success);
+  background: var(--success-bg);
+
+  border: 1px solid #c8e6c9;
+}
+
+.licenceWarning {
+  color: var(--warning);
+  background: var(--warning-bg);
+
+  border: 1px solid #ffd7ad;
+}

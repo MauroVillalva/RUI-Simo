@@ -20,7 +20,7 @@ const Square = ({ port, error, weight, styles, statusChar, statusBo }) => {
     <div className={styles.portReadingContainer}>
       <p className={styles.portReadingContainerTitle}>LECTURA</p>
       <div className={styles.portReadingWeightContainer}>
-        <p className={styles.portReadingWeightContainerWeight}>{weight}</p>
+        <p className={styles.portReadingWeightContainerWeight}>{weight} kg</p>
         <div className={styles.portReadingWeightContainerStatus}>
           <p className={styles.portReadingWeightContainerStatusChar}>{(statusBo && statusChar) && statusChar || ''}</p>
           <p className={styles.portReadingWeightContainerStatusTitle}>ESTADO</p>

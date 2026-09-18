@@ -60,10 +60,12 @@ export const readWeight = (port) => {
       });
 
       const dataToNum = Number(numSelected.trim());
+
       const statusChar = charSelected;
 
       return {
         weight: dataToNum,
+        validWeight: !Number.isNaN(dataToNum),
         statusChar: statusChar,
         statusBo: statusBo.toString().toLowerCase() == 'true',
         error: false,

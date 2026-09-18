@@ -32,7 +32,7 @@ export default function MainPage() {
   };
 
   const saveChanges = async () => {
-    const newConfig = config;
+    const newConfig = structuredClone(conf);
 
     // newConfig.portOne.path = document.getElementById("onepath").value;
     newConfig.portOne.baudRate = document.getElementById("onebaudRate").value;

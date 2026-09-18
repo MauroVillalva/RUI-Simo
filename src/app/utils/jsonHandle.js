@@ -19,11 +19,11 @@ export const readJson = async () => {
 export const writeJson = async (data) => {
   const jsonString = JSON.stringify(data, null, 2);
 
-  fs.writeFile('/home/mgv/config.json', jsonString, (err) => {
-    if (err) {
-      console.error(`Error reading file (writeJson): ${err}`);
-      return;
-    };
+  try {
+    await fs.promises.writeFile('/home/mgv/config.json', jsonString);
     console.log('JSON data written successfully!');
-  });
+  } catch (err) {
+    console.error(`Error writing file (writeJson): ${err}`);
+    throw err;
+  };
 };
