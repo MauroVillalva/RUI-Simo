@@ -75,9 +75,18 @@ export async function register() {
 
       if (!portOneCheck || !portTwoCheck) setTimeout(async () => {
         console.log('Iniciando lectura Sindesys...');
-        setInterval(async () => {
-          await readSindesys(checkPathSin(), sum);
-        }, 1000);
+
+        const readLoop = async () => {
+          try {
+            await readSindesys(checkPathSin(), sum);
+          } catch (error) {
+            console.error('Error en lectura Sindesys:', error);
+          } finally {
+            setTimeout(readLoop, 1000);
+          };
+        };
+
+        await readLoop();
       }, 18000);
 
       setTimeout(() => console.log('Sistema listo!'), 20000);
